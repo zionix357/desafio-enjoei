@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zqx-ay-Z7t">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Light.otf">
+            <string>ProximaNova-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--moças 25% off-->
+        <scene sceneID="H0E-fJ-48s">
+            <objects>
+                <viewController id="A1Y-VA-io9" customClass="HomeController" customModule="desafio_enjoei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nzM-PS-3EX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRT-FK-XQG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moças 25% off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88c-nE-4f4">
+                                        <rect key="frame" x="20" y="35" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
+                                        <color key="textColor" red="0.35686274509803922" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="88c-nE-4f4" firstAttribute="leading" secondItem="bRT-FK-XQG" secondAttribute="leading" constant="20" id="JWq-3k-CAY"/>
+                                    <constraint firstAttribute="trailing" secondItem="88c-nE-4f4" secondAttribute="trailing" constant="20" id="NZH-TT-7hf"/>
+                                    <constraint firstAttribute="height" constant="89" id="U3b-Mr-0BT"/>
+                                    <constraint firstAttribute="bottom" secondItem="88c-nE-4f4" secondAttribute="bottom" constant="20" id="sba-YX-VYo"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7tl-wE-dZS">
+                                <rect key="frame" x="0.0" y="89" width="375" height="529"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u2V-4f-M1f" customClass="HomeViewFlowLayout" customModule="desafio_enjoei" customModuleProvider="target">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="collectionView"/>
+                                </userDefinedRuntimeAttributes>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7tl-wE-dZS" firstAttribute="top" secondItem="bRT-FK-XQG" secondAttribute="bottom" id="0WK-t2-uup"/>
+                            <constraint firstItem="oXS-ww-znh" firstAttribute="bottom" secondItem="7tl-wE-dZS" secondAttribute="bottom" id="1xD-jF-tDD"/>
+                            <constraint firstItem="oXS-ww-znh" firstAttribute="trailing" secondItem="7tl-wE-dZS" secondAttribute="trailing" id="OfY-j7-fDu"/>
+                            <constraint firstItem="bRT-FK-XQG" firstAttribute="top" secondItem="nzM-PS-3EX" secondAttribute="top" id="V4H-4c-Qaw"/>
+                            <constraint firstItem="bRT-FK-XQG" firstAttribute="leading" secondItem="oXS-ww-znh" secondAttribute="leading" id="aon-Ki-8zp"/>
+                            <constraint firstItem="7tl-wE-dZS" firstAttribute="leading" secondItem="oXS-ww-znh" secondAttribute="leading" id="mLH-dM-63F"/>
+                            <constraint firstItem="bRT-FK-XQG" firstAttribute="trailing" secondItem="oXS-ww-znh" secondAttribute="trailing" id="tej-sE-U2V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oXS-ww-znh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="home_unselected" selectedImage="home_selected" id="800-3t-ver">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                        <color key="badgeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="home"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="moças 25% off" id="nNL-lJ-Xj9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="7tl-wE-dZS" id="W8E-OT-DHq"/>
+                        <outlet property="customNavigationView" destination="bRT-FK-XQG" id="G6O-gq-KrN"/>
+                        <outlet property="titleLabel" destination="88c-nE-4f4" id="Efm-Ix-s4t"/>
+                        <segue destination="zcv-tr-DNv" kind="show" identifier="detailSegue" id="kOF-fX-qdU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJh-gf-ubq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="69.715142428785612"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="gtf-nu-Ps5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="zcv-tr-DNv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iH-dB-cfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544" y="69"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PXh-Sx-fQa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Zqx-ay-Z7t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aBi-Re-eVP">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="20"/>
+                            <color key="textColor" red="0.35686274509803922" green="0.34509803921568627" blue="0.33333333333333331" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="28"/>
+                            <color key="textColor" red="0.35686274509803922" green="0.34509803921568627" blue="0.33333333333333331" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A1Y-VA-io9" kind="relationship" relationship="rootViewController" id="xTn-x3-1Kh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qws-Oe-Xt2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="69.715142428785612"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_selected" width="24" height="24"/>
+        <image name="home_unselected" width="24" height="24"/>
+    </resources>
+</document>

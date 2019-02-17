@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zAx-Gt-qSj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Light.otf">
+            <string>ProximaNova-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Detail Controller-->
+        <scene sceneID="Ogu-Hi-5zx">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="zAx-Gt-qSj" customClass="DetailController" customModule="desafio_enjoei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c8A-ct-bFy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wgn-6D-PWa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="447"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="447" id="Lac-Al-0KX"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YIE-HF-Wig" customClass="DetailViewFlowLayout" customModule="desafio_enjoei" customModuleProvider="target">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ay1-DU-A5g">
+                                <rect key="frame" x="168" y="405" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.90980392156862744" green="0.33725490196078434" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc7-6O-eeU">
+                                <rect key="frame" x="20" y="469" width="335" height="27"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="22"/>
+                                <color key="textColor" red="0.35686274509803922" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20% OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W04-Oz-rJp">
+                                <rect key="frame" x="20" y="504" width="335" height="17"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="14"/>
+                                <color key="textColor" red="0.49019607840000001" green="0.47843137250000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ay1-DU-A5g" firstAttribute="top" secondItem="wgn-6D-PWa" secondAttribute="bottom" constant="-42" id="4FT-Xv-jfv"/>
+                            <constraint firstItem="AGn-IJ-UcZ" firstAttribute="trailing" secondItem="W04-Oz-rJp" secondAttribute="trailing" constant="20" id="Cad-sb-08N"/>
+                            <constraint firstItem="Tc7-6O-eeU" firstAttribute="top" secondItem="wgn-6D-PWa" secondAttribute="bottom" constant="22" id="CeV-zg-A71"/>
+                            <constraint firstItem="AGn-IJ-UcZ" firstAttribute="trailing" secondItem="Tc7-6O-eeU" secondAttribute="trailing" constant="20" id="DxV-wP-Ymg"/>
+                            <constraint firstItem="wgn-6D-PWa" firstAttribute="leading" secondItem="AGn-IJ-UcZ" secondAttribute="leading" id="HlI-FF-OqU"/>
+                            <constraint firstItem="ay1-DU-A5g" firstAttribute="centerX" secondItem="wgn-6D-PWa" secondAttribute="centerX" id="MCb-Ns-Cmx"/>
+                            <constraint firstItem="Tc7-6O-eeU" firstAttribute="leading" secondItem="AGn-IJ-UcZ" secondAttribute="leading" constant="20" id="dCg-2Q-lYT"/>
+                            <constraint firstItem="wgn-6D-PWa" firstAttribute="trailing" secondItem="AGn-IJ-UcZ" secondAttribute="trailing" id="gRe-Sb-sr7"/>
+                            <constraint firstItem="W04-Oz-rJp" firstAttribute="leading" secondItem="AGn-IJ-UcZ" secondAttribute="leading" constant="20" id="kP7-OJ-nju"/>
+                            <constraint firstItem="W04-Oz-rJp" firstAttribute="top" secondItem="Tc7-6O-eeU" secondAttribute="bottom" constant="8" id="nYK-Ay-SEA"/>
+                            <constraint firstItem="wgn-6D-PWa" firstAttribute="top" secondItem="c8A-ct-bFy" secondAttribute="top" id="tME-Bs-PzW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AGn-IJ-UcZ"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="wgn-6D-PWa" id="yVU-e5-UcP"/>
+                        <outlet property="discountPercentageLabel" destination="W04-Oz-rJp" id="RXc-Ge-js6"/>
+                        <outlet property="pageControl" destination="ay1-DU-A5g" id="qo3-fn-44P"/>
+                        <outlet property="priceLabel" destination="Tc7-6O-eeU" id="esE-gg-dce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYi-t2-Tvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280.80000000000001" y="-131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
