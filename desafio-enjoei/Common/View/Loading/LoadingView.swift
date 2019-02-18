@@ -137,10 +137,4 @@ extension UIView {
     @objc func dismissLoadingIndicator() {
         viewWithTag(kLoadingViewTag)?.removeFromSuperview()
     }
-    
-    func removeSubviews(withTags tags:[Int]) {
-        for tag in tags {
-            viewWithTag(tag)?.removeFromSuperview()
-        }
-    }
 }

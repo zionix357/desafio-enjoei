@@ -26,7 +26,6 @@ extension UIColor {
     }
     
     static let mainGray = UIColor(hexString: "D8D8D8")!
-    static let mainCream = UIColor(hexString: "F4F2F0")!
     static let mainRed = UIColor(hexString: "F77274")!
     static let mainGrayLike = UIColor(hexString: "7D7A77")!
 }
