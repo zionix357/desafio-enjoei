@@ -9,24 +9,22 @@
 import UIKit
 
 class HomePresenterRouter {
-    struct Constants {
+    struct Constants { // swiftlint:disable nesting
         struct Segue {
             static let ShowDetail = "detailSegue"
         }
     }
-    
     private weak var viewController: HomeController?
-    
     init(viewController: HomeController) {
         self.viewController = viewController
     }
-    
-    func onDetail(product: Any){
+    func onDetail(product: Any) {
         viewController?.performSegue(withIdentifier: Constants.Segue.ShowDetail, sender: product)
     }
-    
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Constants.Segue.ShowDetail, let destination = segue.destination as? DetailController, let product = sender as? Product {
+        if segue.identifier == Constants.Segue.ShowDetail,
+            let destination = segue.destination as? DetailController,
+            let product = sender as? Product {
             destination.presenter.product = product
         }
     }

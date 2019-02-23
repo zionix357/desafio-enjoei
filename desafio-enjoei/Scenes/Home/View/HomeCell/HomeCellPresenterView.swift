@@ -18,5 +18,5 @@ protocol HomeCellPresenterView: AnyObject {
     func display(likeCount: String)
     func display(like: String)
     func display(dislike: String)
-    var onLikeButtonPressed:((Bool) -> Void)? { get set }
+    var onLikeButtonPressed: ((Bool) -> Void)? { get set }
 }

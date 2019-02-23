@@ -10,11 +10,9 @@ import UIKit
 
 class HomeHeaderView: UICollectionReusableView {
     @IBOutlet weak var timeLabel: UILabel!
-    
-    class var identifier:String {
+    class var identifier: String {
         return String(describing: type(of: HomeHeaderView.self))
     }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

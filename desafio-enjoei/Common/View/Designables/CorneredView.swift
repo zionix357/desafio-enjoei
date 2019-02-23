@@ -8,22 +8,19 @@
 
 import UIKit
 
-///An UIView with rounded corners.
 @IBDesignable class CorneredView: UIView {
-    @IBInspectable var cornerRadius:CGFloat = 0 {
+    @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
         }
     }
-    
-    @IBInspectable var borderWidth:CGFloat = 0 {
-        didSet{
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
             layer.borderWidth = borderWidth
         }
     }
-    
-    @IBInspectable var borderColor:UIColor = .clear {
-        didSet{
+    @IBInspectable var borderColor: UIColor = .clear {
+        didSet {
             layer.borderColor = borderColor.cgColor
         }
     }

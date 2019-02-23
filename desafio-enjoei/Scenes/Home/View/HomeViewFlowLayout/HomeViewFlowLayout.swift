@@ -11,14 +11,12 @@ import UIKit
 class HomeViewFlowLayout: UICollectionViewFlowLayout {
     fileprivate var numberOfColumns = 2
     fileprivate var cellPadding: CGFloat = 10
-    
     fileprivate var contentWidth: CGFloat {
         guard let collectionView = collectionView else {
             return 0
         }
         return (collectionView.bounds.width / CGFloat(numberOfColumns)) - cellPadding * 1.5
     }
-    
     override func prepare() {
         super.prepare()
         minimumInteritemSpacing = 1
@@ -27,10 +25,9 @@ class HomeViewFlowLayout: UICollectionViewFlowLayout {
         scrollDirection = .vertical
         headerReferenceSize = CGSize(width: screenWidth, height: 65)
     }
-    
     override var itemSize: CGSize {
-        set{}
-        get{
+        set { }
+        get {
             return CGSize(width: Int(contentWidth), height: Int(contentWidth * 1.83))
         }
     }

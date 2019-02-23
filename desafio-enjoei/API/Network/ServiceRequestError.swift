@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ServiceRequestError{
+enum ServiceRequestError {
     case none(String)
     case parseError(String)
     case unauthorized(String)

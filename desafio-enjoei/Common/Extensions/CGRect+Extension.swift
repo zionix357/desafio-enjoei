@@ -10,7 +10,7 @@ import UIKit
 
 extension CGRect {
     var idealSize: String {
-        if width <= 180{
+        if width <= 180 {
             return "180x180/"
         } else if width <= 460 {
             return "460x460/"
@@ -21,5 +21,3 @@ extension CGRect {
         }
     }
 }
-
-

@@ -9,12 +9,8 @@
 import UIKit
 
 class PhotoPageCell: UICollectionViewCell {
+    class var identifier: String { return String(describing: type(of: PhotoPageCell.self)) }
     @IBOutlet weak var photoImageView: DownloadImageView!
-    
-    class var identifier:String {
-        return String(describing: type(of: PhotoPageCell.self))
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

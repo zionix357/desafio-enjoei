@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIViewController {
-    func setBackArrowButton(){
+    func setBackArrowButton() {
         let backBtn = #imageLiteral(resourceName: "arrow").withRenderingMode(.alwaysOriginal)
         navigationController?.navigationBar.backIndicatorImage = backBtn
         navigationController?.navigationBar.backIndicatorTransitionMaskImage = backBtn

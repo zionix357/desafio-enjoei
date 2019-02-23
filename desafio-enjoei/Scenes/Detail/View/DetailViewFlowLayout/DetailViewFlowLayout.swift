@@ -15,10 +15,9 @@ class DetailViewFlowLayout: UICollectionViewFlowLayout {
         minimumLineSpacing = 0
         scrollDirection = .horizontal
     }
-    
     override var itemSize: CGSize {
-        set{}
-        get{
+        set {}
+        get {
             return CGSize(width: screenWidth, height: 447)
         }
     }

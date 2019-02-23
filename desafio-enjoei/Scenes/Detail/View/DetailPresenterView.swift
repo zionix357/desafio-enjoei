@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DetailPresenterView : AnyObject {
+protocol DetailPresenterView: AnyObject {
     func reloadData()
     func display(numberPages: Int)
     func display(price: String)

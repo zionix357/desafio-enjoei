@@ -11,17 +11,7 @@ import Foundation
 struct Photo: Codable {
     let id: Int?
     let imagePublicId: String?
-    
-//    var urlImage : String {
-//        get{
-//            guard let url = imagePublicId else {
-//                return ""
-//            }
-//            return "https://photos.enjoei.com.br/public/460x460/\(url).jpg"
-//        }
-//    }
-    
-    func urlImage(size: String) -> String{
+    func urlImage(size: String) -> String {
         guard let url = imagePublicId else {
             return ""
         }

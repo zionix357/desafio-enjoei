@@ -66,12 +66,10 @@ struct Product: Codable {
     let categoryTags: [CategoryTag]?
     let promotions: [Promotion]?
     let awesomeness: Int?
-
-    var _price : String {
-        get{ return "R$ \(price ?? 0)" }
+    var priceFormatted: String {
+        return "R$ \(price ?? 0)"
     }
-    
-    var _originalPrice : String {
-        get { return "R$ \(originalPriceInteger ?? 0)" }
+    var originalPriceFormatted: String {
+        return "R$ \(originalPriceInteger ?? 0)"
     }
 }

@@ -10,26 +10,28 @@ import Foundation
 
 extension Dictionary {
     func buildQueryString() -> String {
-        
         var urlVars: [String] = []
-        
         for (key, value) in self {
             if let value = value as? [Any] {
-                for v in value {
-                    if let encodedValue = "\(v)".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed), let key = key as? String {
+                for subValue in value {
+                    if
+                        let encodedValue = "\(subValue)".addingPercentEncoding(
+                            withAllowedCharacters: CharacterSet.urlQueryAllowed),
+                        let key = key as? String {
                         urlVars.append(key + "[]=" + encodedValue)
                     }
                 }
             } else {
-                if let valueString = value as? String, let encodedValue = valueString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed), let key = key as? String {
+                if let valueString = value as? String,
+                    let encodedValue = valueString.addingPercentEncoding(
+                        withAllowedCharacters: CharacterSet.urlQueryAllowed),
+                    let key = key as? String {
                     urlVars.append(key + "=" + encodedValue)
                 }
             }
         }
-        
         return urlVars.isEmpty ? "" : "?" + urlVars.joined(separator: "&")
     }
-    
     var jsonString: String? {
         do {
             let data = try JSONSerialization.data(withJSONObject: self, options: [])

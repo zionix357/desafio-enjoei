@@ -10,12 +10,9 @@ import UIKit
 
 class DetailPresenterRouter {
     private weak var viewController: DetailController?
-    
     init(viewController: DetailController) { self.viewController = viewController }
-    
-    func onPopViewController(){
+    func onPopViewController() {
         viewController?.navigationController?.popViewController(animated: true)
     }
-    
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {}
 }

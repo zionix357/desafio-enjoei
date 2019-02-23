@@ -10,13 +10,10 @@ import Foundation
 
 struct Avatar: Codable {
     let imagePublicId: String?
-    
-    var urlImage : String {
-        get{
-            guard let url = imagePublicId else {
-                return ""
-            }
-            return "https://photos.enjoei.com.br/public/460x460/\(url).jpg"
+    var urlImage: String {
+        guard let url = imagePublicId else {
+            return ""
         }
+        return "https://photos.enjoei.com.br/public/460x460/\(url).jpg"
     }
 }
